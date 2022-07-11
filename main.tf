@@ -4,6 +4,8 @@ terraform {
 
 resource "aws_ecr_repository" "repo" {
   name = var.image_name
+  image_tag_mutability = "MUTABLE"
+
 }
 
 resource "aws_ecr_lifecycle_policy" "repo-policy" {
